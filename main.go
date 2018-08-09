@@ -196,6 +196,7 @@ func main() {
 	log.Printf(`Total active goroutines: %d.`, runtime.NumGoroutine())
 
 	// Spawn the output goroutine.
+
 	wgWrite.Add(1)
 	go writeReport(bufwriter, results)
 
